@@ -1,0 +1,12 @@
+<div class="m-4 p-3 container mx-auto">
+<h1 class=" mb-3"><%= @task.title %></h1>
+
+<div class="border border-dark p-3 my-3 details">
+<p class="m-0"><%= @task.details%></p>
+</div>
+<p><input type="checkbox" onclick="return false;" <%= "checked" if @task.completed? %> name="checkbox_<%= @task.title %>"> Completed</p>
+<div class="d-flex justify-content-between">
+<%= link_to "Back to list", tasks_path %>
+<%= link_to "Edit task", edit_task_path %>
+</div>
+</div>
